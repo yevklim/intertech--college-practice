@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background-color: #60606C;
+    border-bottom: 1px solid #23232d;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav a {
+    display: flex;
+    text-decoration: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+nav spacer {
+    flex: 1 1;
+}
+
+nav span.navi {
+    display: flex;
+    position: relative;
+}
+nav span.navi .submenu {
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    background-color: #60606C;
+    border: 1px solid #23232d;
+    border-top: none;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+nav span.navi:not(:hover) .submenu {
+    height: 0;
+}
+nav span.navi .submenu a.navi {
+    font-size: 20px;
+}
+
+nav a.navi {
+    padding: 12px 32px;
+    align-items: center;
+    color: #FFFFFF;
+    text-decoration: underline 4px #ff800000;
+    
+    transition: color .2s ease, text-decoration-color .2s ease;
+}
+
+nav a.navi:hover {
+    color: #ff8000;
+    text-decoration: underline 4px #ff8000;
+}
+
+nav #logo {
+    border-right: 1px solid #23232d;
+    max-height: 100%;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+body nav {
+    flex: 0 0 64px;
+}
+
+body div#welcome-div,
+body div#catalog-div {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body div#welcome-div {
+    flex-direction: column;
+
+    box-shadow: inset 0 0 500px 0 #60606C;
+    user-select: none;
+
+    background-repeat: repeat;
+    /* background-size: 50% 50% contain; */
+    background-position: center center;
+    background-image: url(/imgs/laptop-5.jpg);
+}
+
+body div#welcome-div h1 {
+    font-size: 56px;
+}
+
+body div#welcome-div h2 {
+    font-size: 32px;
+}
+
+body div#welcome-div h1,
+body div#welcome-div h2 {
+    color: #FFFFFF;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+body div#catalog-div {
+    flex-direction: row wrap;
+    padding: 2cm;
+    gap: .8cm;
+    background-color: #60606C40;
+    box-shadow: inset 0 0 500px 0 #60606C;
+}
+
+.catalogi {
+    width: 320px;
+    height: 256px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px #60606c30;
+    text-decoration: none;
+    transition: box-shadow .4s ease, transform .4s ease;
+
+    border-radius: 16px;
+    clip: true;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.catalogi:hover {
+    box-shadow: 0 0 12px #60606c80;
+    transform: scale(1.1);
+}
+
+.catalogi.laptops {
+    background-image: url(/imgs/laptop-5.jpg);
+}
+
+.catalogi.keyboards {
+    background-image: url(/imgs/keyboard-2.jpg);
+    background-size: 80%;
+}
+
+.catalogi h1 {
+    font-size: 24px;
+    color: #FFFFFF;
+    filter: drop-shadow(0 2px 6px #00000080);
+}
+
+body div#products {
+    display: flex;
+    flex-flow: row wrap;
+
+    padding: 1cm;
+    gap: 1cm;
+
+    overflow: auto;
+    justify-content: center;
+}
+
+body div#products header {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 500;
+    border-bottom: 2px solid #60606C;
+    color: #60606C;
+    padding-bottom: 4px;
+}
+
+.product {
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 400px;
+    padding: 16px;
+    gap: 8px;
+
+    border-radius: 16px;
+    cursor: pointer;
+    transition: box-shadow .2s ease;
+    user-select: none;
+}
+
+.product:hover {
+    box-shadow: 0 1px 5px rgb(8 8 8 / 15%);
+}
+
+.product .label {
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.product .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    flex: 1 1;
+}
+.product .img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.product .price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+}
+.product .price .number {
+    font-size: 28px;
+    font-weight: 900;
+}
+.product .price .currency {
+    font-size: 16px;
+    font-style: italic;
+}
+
+div#contacts-div {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2cm;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 1;
+}
+
+div#contacts-div header {
+    min-width: 50%;
+    font-size: 32px;
+    font-weight: 500;
+    border-bottom: 2px solid #60606C80;
+    color: #60606C;
+    padding-bottom: 4px;
+    text-align: center;
+}
+
+div#contacts-div h2 {
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 2px solid #60606C80;
+    color: #60606C;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+}
+
+div#contacts-div h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #60606C;
+    padding-bottom: 4px;
+}
+div#contacts-div .phones {
+    border-bottom: 2px solid #60606C80;
+    margin-bottom: 8px;
+}
+div#contacts-div h3.bold {
+    font-weight: 600;
+}
