@@ -103,7 +103,7 @@ body div#welcome-div {
     background-repeat: repeat;
     /* background-size: 50% 50% contain; */
     background-position: center center;
-    background-image: url(/imgs/laptop-5.jpg);
+    background-image: url(/intertech--college-practice/imgs/laptop-5.jpg);
 }
 
 body div#welcome-div h1 {
@@ -155,11 +155,11 @@ body div#catalog-div {
 }
 
 .catalogi.laptops {
-    background-image: url(/imgs/laptop-5.jpg);
+    background-image: url(/intertech--college-practice/imgs/laptop-5.jpg);
 }
 
 .catalogi.keyboards {
-    background-image: url(/imgs/keyboard-2.jpg);
+    background-image: url(/intertech--college-practice/imgs/keyboard-2.jpg);
     background-size: 80%;
 }
 
